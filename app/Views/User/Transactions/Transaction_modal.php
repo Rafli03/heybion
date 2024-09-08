@@ -13,12 +13,18 @@
                                 <li class="address-detail mb-0"> <h4 class="recipient-detail"><strong>Shipping Address :</strong> recipient | phone number </h4></li>
                                 <li class="pricing-item mt-0"> <h4 class="recipient-address"> address </h4></li>
                                 <li class="pricing-item mt-0" style="display:none"> <h4 class="detail-shipping"> </h4></li>
+                                <li class="pricing-item mt-0" style="display:none"> <h4 class="detail-cancel"> </h4></li>
                             </ul>
                         </div>
                     </div>
                     <div class="products-list">
                     </div>
                     <div class="row gy-4 mt-1 justify-content-center">
+                        <div class="col-lg-12 content pricing">
+                            <ul>
+                                <li class="pricing-item mt-0 d-flex justify-content-between"> <h4>Ongkir : <p class="jenis-ongkir"></p></h4><h4 class="total-ongkir"> </h4></li>
+                            </ul>
+                        </div>
                         <div class="col-lg-12 content pricing">
                             <ul>
                                 <li class="pricing-item mt-0 d-flex justify-content-between"> <h4>Total :</h4><h4 class="total-price"> </h4></li>

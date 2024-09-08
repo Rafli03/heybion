@@ -113,11 +113,19 @@
                     $('.recipient-address').html(response.data.userDetail.address + ', ' + response.data.userDetail.pos_code + ', ' + response.data.userDetail.city + ', ' + response.data.userDetail.province + ', ' + response.data.userDetail.country)
                     $('.products-list').html(response.data.listProducts)
                     $('.total-price').html('Rp. ' + response.data.invoice.total_invoice)
+                    $('.total-ongkir').html('Rp. ' + response.data.invoice.shipping_cost)
+                    $('.jenis-ongkir').html(response.data.invoice.keterangan_ekspedisi)
                     if(response.data.invoice.receipt_number){
                         $('.detail-shipping').parent().show()
                         $('.detail-shipping').html(response.data.invoice.delivery_service + ' - ' + response.data.invoice.receipt_number)
                     }else{
                         $('.detail-shipping').parent().hide()
+                    }
+                    if(response.data.invoice.cancel_reason){
+                        $('.detail-cancel').parent().show()
+                        $('.detail-cancel').html("Cancel Reason : " + response.data.invoice.cancel_reason)
+                    }else{
+                        $('.detail-cancel').parent().hide()
                     }
                     // if(response.data.invoice.payment_status == 4){
                     //     $('.footer-transaction').append('<button type="button" class="btn btn-default btn-finish" data-trd="' + response.data.invoice.transaction_id + '">Finish Order</button>')
